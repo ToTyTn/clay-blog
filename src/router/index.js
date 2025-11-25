@@ -1,12 +1,16 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import MumuView from "../views/MumuView.vue";
+// import T1View from "../views/T1View.vue";
 import NezhaView from "../views/NezhaView.vue";
 import BearView from "../views/BearView.vue";
 import DoraemonView from "../views/DoraemonView.vue";
 import CinnamorollView from "../views/CinnamorollView.vue";
 import PleasantGoatView from "../views/PleasantGoatView.vue";
 import HalloweenView from "../views/HalloweenView.vue";
+import RaccoonView from "../views/RaccoonView.vue";
+import PaddogView from "../views/PaddogView.vue";
+import GenshinView from "../views/GenshinView.vue";
 // import BookCatalog from '../views/BookCatalog.vue'
 
 const routes = [
@@ -20,6 +24,7 @@ const routes = [
     name: "mumu",
     component: MumuView,
   },
+
   {
     path: "/nezha",
     name: "nezha",
@@ -49,6 +54,21 @@ const routes = [
     path: "/halloween",
     name: "halloween",
     component: HalloweenView,
+  },
+  {
+    path: "/raccoon",
+    name: "raccoon",
+    component: RaccoonView,
+  },
+  {
+    path: "/paddog",
+    name: "paddog",
+    component: PaddogView,
+  },
+  {
+    path: "/genshin",
+    name: "genshin",
+    component: GenshinView,
   },
 
   // {

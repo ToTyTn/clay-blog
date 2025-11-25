@@ -35,8 +35,8 @@
         <div class="time">
           <p @click="t1">2025.11.20</p>
           <p @click="goToCinnamoroll">2025.11.21</p>
-          <p>2025.11.22</p>
-          <p>2025.11.23</p>
+          <p @click="goToRaccoon">2025.11.22</p>
+          <p @click="goToGenshin">2025.11.23</p>
         </div>
       </div>
     </div>
@@ -58,6 +58,16 @@ export default {
     goToCinnamoroll() {
       this.$router.push({
         path: "/cinnamoroll",
+      });
+    },
+    goToRaccoon() {
+      this.$router.push({
+        path: "/raccoon",
+      });
+    },
+    goToGenshin() {
+      this.$router.push({
+        path: "/genshin",
       });
     }
   },

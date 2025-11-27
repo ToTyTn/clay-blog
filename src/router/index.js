@@ -11,7 +11,8 @@ import HalloweenView from "../views/HalloweenView.vue";
 import RaccoonView from "../views/RaccoonView.vue";
 import PaddogView from "../views/PaddogView.vue";
 import GenshinView from "../views/GenshinView.vue";
-// import BookCatalog from '../views/BookCatalog.vue'
+import GsapAnimationView from "../views/GsapAnimationView.vue";
+import LotteryView from "../views/LotteryView.vue";
 
 const routes = [
   {
@@ -69,6 +70,16 @@ const routes = [
     path: "/genshin",
     name: "genshin",
     component: GenshinView,
+  },
+  {
+    path: "/gsap",
+    name: "gsap",
+    component: GsapAnimationView,
+  },
+  {
+    path: "/lottery",
+    name: "lottery",
+    component: LotteryView,
   },
 
   // {

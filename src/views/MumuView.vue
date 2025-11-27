@@ -39,6 +39,11 @@
           <p @click="goToGenshin">2025.11.23</p>
         </div>
       </div>
+      
+      <!-- 添加跳转按钮 -->
+      <div class="floating-btn" @click="goToLottery">
+        <span>抽奖</span>
+      </div>
     </div>
   </div>
 </template>
@@ -69,6 +74,9 @@ export default {
       this.$router.push({
         path: "/genshin",
       });
+    },
+    goToLottery() {
+      this.$router.push({ path: "/lottery" });
     }
   },
 };
@@ -279,6 +287,36 @@ export default {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 100'%3E%3Cpath d='M20,0 Q35,20 20,40 T20,80 T20,100' fill='none' stroke='%235d4037' stroke-width='3'/%3E%3Ccircle cx='25' cy='20' r='4' fill='%23d4af37'/%3E%3Ccircle cx='15' cy='60' r='5' fill='%23d4af37'/%3E%3C/svg%3E");
 }
 
+// 浮动按钮样式
+.floating-btn {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 100;
+  
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 @media (max-width: 768px) {
   .background-content {
     padding: 20px;
@@ -342,6 +380,14 @@ export default {
 
   .as .time p {
     margin: 20px;
+  }
+  
+  .floating-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 12px;
   }
 }
 </style>
